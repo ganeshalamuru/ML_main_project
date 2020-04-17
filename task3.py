@@ -20,7 +20,7 @@ class CartPoleEnv(gym.Env):
         self.total_mass = (self.masspole + self.masscart)
         self.length = 0.5
         self.polemass_length = (self.masspole * self.length)
-        self._seed()
+        self.seed()
 
         #self.force_mag = 10.0
         self.force_mag = 10.0*(1+self.np_random.uniform(low=-0.30, high=0.30))
